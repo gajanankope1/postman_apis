@@ -1,0 +1,309 @@
+{
+	"info": {
+		"_postman_id": "cd4e2a64-4bb3-4dfb-a313-55fdf5983c5c",
+		"name": "DodgeQR_Project Users Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Gajanan\",\n    \"whatsapp_primary_number\":\"9867785634\",\n    \"whatsapp_secondary_number\":\"9867785344\",\n    \"emergency_number\":\"9867785699\",\n    \"email\":\"gajanan@gmail.com\",\n    \"password\":\"sang@123\",\n    \"address\":\"Pune, Maharashtra, India , 411109\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"gajanan@gmail.com\",\n    \"password\":\"sand@1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User LogOut",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM2NzMzYzRlMWIzOGJlNzhmYTVmNmUiLCJpYXQiOjE2NTcxNzI4NDZ9.fX8cPO-jYWLs5URCDA24X8jil448Omj_qbxwD8qgmh8",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/users/user_logout",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"user_logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Forgot Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"gajanan@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/forgot-password",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"forgot-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Profile View",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM3Y2Q0ZTI1ZmVjZmFmZDg0YTE1Y2QiLCJpYXQiOjE2NTc0NTUxMjZ9.Uj0rayP5UsRGkbldHOKUUki87jO7Ne4kB_Ev240MwAA",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/users/user_profile",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"user_profile"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User Profile",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM2NzMzYzRlMWIzOGJlNzhmYTVmNmUiLCJpYXQiOjE2NTcxNzI4NDZ9.fX8cPO-jYWLs5URCDA24X8jil448Omj_qbxwD8qgmh8",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Gajanan Kope\",\n    \"whatsapp_primary_number\": 9867785635\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/update_user_profile",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"update_user_profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Packages",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM3Y2Q0ZTI1ZmVjZmFmZDg0YTE1Y2QiLCJpYXQiOjE2NTcyNjE0MDl9.EsxO2P6Xq53N7AcbcF2lZ0yMXP3UCXMEBpvHwBrxCG8",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/users/all_packages",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"all_packages"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Purchase Package",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM3Y2Q0ZTI1ZmVjZmFmZDg0YTE1Y2QiLCJpYXQiOjE2NTcyNjE0MDl9.EsxO2P6Xq53N7AcbcF2lZ0yMXP3UCXMEBpvHwBrxCG8",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"package_id\":\"62c673f23237ff1a9be4c1e8\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/purchase_package",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"purchase_package"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Select Subcategary",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM3Y2Q0ZTI1ZmVjZmFmZDg0YTE1Y2QiLCJpYXQiOjE2NTcyNjE0MDl9.EsxO2P6Xq53N7AcbcF2lZ0yMXP3UCXMEBpvHwBrxCG8",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"package_id\":\"62c673f23237ff1a9be4c1e8\",\n    \"subcategary_id\":\"62c679c110d6df2bde3dca8d\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/select_subcategary",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"select_subcategary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Purchase History",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM3Y2Q0ZTI1ZmVjZmFmZDg0YTE1Y2QiLCJpYXQiOjE2NTcyNjE0MDl9.EsxO2P6Xq53N7AcbcF2lZ0yMXP3UCXMEBpvHwBrxCG8",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/users/purchase_history",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"purchase_history"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,505 @@
+{
+	"info": {
+		"_postman_id": "60bd6c62-1c4b-413d-b04a-e750d046e06e",
+		"name": "DodgeQr_Project Admin Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin Profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM4MDI2MDQ3MGJhNzlkMWY1NmU5YTgiLCJpYXQiOjE2NTc0NjM0ODEsImV4cCI6MTY1NzQ2NTI4MX0.ezHnJVnGKwEFToY9aMgJUMxo7eGH4eTaiq31wwy4uyQ",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/admin/admin_profile",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"admin_profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Update Profile",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM4MDI2MDQ3MGJhNzlkMWY1NmU5YTgiLCJpYXQiOjE2NTcyNzU1MDN9.QW1MrzVl92aU69J67jOXSrZSq0C0T5RrhwMVD9C7jdY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"gajanan.k@prometteur.in\",\n    \"name\":\"My Admin\",\n    \"address\":\"mumbai maharashtra 411111\",\n    \"mobile_number\":\"6785443123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/admin/admin_update_profile",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"admin_update_profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin12@gmail.com\",\n    \"password\": \"admin@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/admin/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmM4MDI2MDQ3MGJhNzlkMWY1NmU5YTgiLCJpYXQiOjE2NTcyNzU1MDN9.QW1MrzVl92aU69J67jOXSrZSq0C0T5RrhwMVD9C7jdY",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/admin/admin_logout",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"admin_logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Forgot Passsword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"gajanan.k@prometteur.in\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/admin/forgot-password",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"forgot-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Packages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/admin/all_packages",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"all_packages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Package",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"package\": \"10\",\n    \"price\": \"500\",\n    \"message\": \"true\",\n    \"call\": \"false\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/admin/add_package",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"add_package"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Package",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"package\":\"20\",\n    \"message\":\"true\",\n    \"call\":\"false\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/admin/update_package",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"update_package"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Package",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"package\":\"20\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/admin/delete_package",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"delete_package"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"message\":\"your car door is not locked\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/admin/add_message",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"add_message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Message",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"62c6742f3237ff1a9be4c1ec\",\n    \"message\":\"door of your home is locked\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/admin/update_message",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"update_message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Message",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"message\":\"your home door is locked\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/admin/delete_message",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"delete_message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Messages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/admin/all_messages",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"all_messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Sub-Categary",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"bike\",\n    \"type\": \"movable\",\n    \"messages\": [\n       {\n           \"_id\":\"62c6745d3237ff1a9be4c1f2\"\n       },\n       {\n           \"_id\":\"62c6746a3237ff1a9be4c1f4\"\n       }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/admin/add_subcategary",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"add_subcategary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All SubCategaries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/admin/view_subcategaries",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"view_subcategaries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update SubCategaries",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"62c6784db3eaacef940b0d0d\",\n    \"title\":\"laptop\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/admin/update_subcategary",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"update_subcategary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete SubCategaries",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"_id\":\"62c6784db3eaacef940b0d0d\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/admin/delete_subcategary",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"delete_subcategary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/admin/all_users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"all_users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"_id\":\"62c51d1839a271458e216024\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/admin/delete_user",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"delete_user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
